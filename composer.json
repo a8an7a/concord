@@ -1,0 +1,29 @@
+{
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "0.6.0",
+        "league/container": "3.3",
+        "slim/twig-view": "3.0.0-beta",
+        "cartalyst/sentinel": "^4.0",
+        "illuminate/database": "^7.10",
+        "illuminate/events": "^7.10",
+        "symfony/http-foundation": "^5.0",
+        "symfony/var-dumper": "^5.0",
+        "slim/flash": "^0.4.0",
+        "vlucas/valitron": "^1.4",
+        "slim/csrf": "^1.0",
+        "phpmailer/phpmailer": "^6.1",
+        "codex-team/editor.js": "dev-master",
+        "illuminate/pagination": "^7.13"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        },
+
+        "files": [
+            "app/helpers.php"
+        ]
+    }
+}

@@ -1,0 +1,700 @@
+/*
+ * ─── FONT CONNECTION ────────────────────────────────────────────────────────────
+ */
+@font-face {
+    font-family: "Segoe UI Bold";
+    src: url("../upload/font/SegoeUI/SegoeUI-Bold.woff") format("woff"),
+            url("../upload/font/SegoeUI/SegoeUI-Bold.ttf") format("tff"); }
+@font-face {
+    font-family: "Segoe UI Semibold";
+    src: url("../upload/font/SegoeUI/SegoeUI-SemiBold.woff") format("woff"),
+            url("../upload/font/SegoeUI/SegoeUI-SemiBold.ttf") format("tff"); }
+@font-face {
+    font-family: "Segoe UI Regular";
+    src: url("../upload/font/SegoeUI/SegoeUI.woff") format("woff"),
+            url("../upload/font/SegoeUI/SegoeUI.ttf") format("tff"); }
+@font-face {
+    font-family: "Proxima Nova Regular";
+    src: url("../upload/font/ProximaNova/ProximaNova-Regular.woff") format("woff"),
+            url("../upload/font/ProximaNova/ProximaNova-Regular.ttf") format("tff"); }
+@font-face {
+    font-family: "Proxima Nova Semibold";
+    src: url("../upload/font/ProximaNova/ProximaNova-Semibold.woff") format("woff"),
+            url("../upload/font/ProximaNova/ProximaNova-Semibold.ttf") format("tff"); }
+
+
+/*
+ * ─── BUTTON STYLE ───────────────────────────────────────────────────────────────
+ */
+.btn-mustard {
+    color: #474747;
+    border-color: #F2B84A;
+    font-size: 16px !important;
+    font-family: "Proxima Nova Regular"!important;}
+.btn-mustard:hover {
+    background-color: #F2B84A;
+    border-color: #F2B84A; }
+.btn-mustard:focus, .btn-mustard.focus {
+    box-shadow: 0 0 0 0.2rem rgba(242, 183, 74, 0.5); }
+.btn-mustard.disabled, .btn-mustard:disabled {
+    color: #F2B84A;
+    background-color: transparent; }
+.btn-mustard:not(:disabled):not(.disabled):active, .btn-mustard:not(:disabled):not(.disabled).active,
+.show > .btn-mustard.dropdown-toggle {
+    color: #474747;
+    background-color: #F2B84A;
+    border-color: #F2B84A; }
+.btn-mustard:not(:disabled):not(.disabled):active:focus, .btn-mustard:not(:disabled):not(.disabled).active:focus,
+.show > .btn-mustard.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(242, 183, 74, 0.5); }
+
+    
+/*
+ * ─── HEADING ────────────────────────────────────────────────────────────────────
+ */
+
+.text {
+    font-size: 16px;
+    color: #474747;
+    font-family: "Proxima Nova Regular"; }
+.caption {
+    font-size: 22px;
+    color: #333333;
+    font-family: "Segoe UI Semibold"; }
+.title {
+    font-size: 25px;
+    color: #474747;
+    font-family: "Segoe UI Bold"; }
+.subtitle {
+    font-size: 20px;
+    color: #474747;
+    margin-bottom: 20px !important;
+    font-family: "Segoe UI Bold"; }
+.subtitle-lite {
+    font-size: 18px;
+    color: #474747;
+    margin-bottom: 20px !important;
+    font-family: "Proxima Nova Semibold"; }
+.small {
+    font-size: 16px;
+    color: #6c757d;
+    font-family: "Proxima Nova Regular"; }
+.text-bold {
+    margin-right: 20px;
+    font-family: "Proxima Nova Semibold"; }
+.paragraph {
+    font-size: 18px;
+    color: #333333;
+    margin-right: 20px;
+    font-family: "Proxima Nova Semibold"; }
+.event-prewiew-title {
+    font-size: 18px;
+    color: #333333;
+    font-family: "Segoe UI Bold"; }
+.aside-title {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 25px;
+    font-family: "Segoe UI Semibold"; }
+.content-title {
+    font-size: 20px;
+    color: #333333;
+    font-family: "Segoe UI Semibold"; }
+.content-subtitle {
+    font-size: 14px;
+    color: #BBBBBB;
+    margin-top: 15px;
+    font-family: "Proxima Nova Regular"; }
+.date {
+    font-size: 16px;
+    color: #BBBBBB;
+    margin-top: 15px;
+    font-family: "Proxima Nova Regular"; }
+.content-title:hover {
+    color: #333333; }
+.form-title {
+    font-size: 18px;
+    color: #474747;
+    font-family: "Proxima Nova Regular"; }
+.profile-caption {
+    font-size: 22px;
+    color: #333333;
+    margin-bottom: 20px !important;
+    font-family: "Proxima Nova Semibold"; }
+.profile-title {
+    font-family: "Proxima Nova Semibold"; }
+.profile-text {
+    font-size: 18px;
+    color: #333333;
+    font-family: "Proxima Nova Regular"; }
+.answer-heading {
+    font-size: 16px;
+    color: #333333;
+    font-family: "Segoe UI Regular"; }
+.answer-heading:hover {
+    color: #333333; }
+.footer-caption {
+    font-size: 20px;
+    color: #333333;
+    font-family: "Segoe UI Semibold"; }
+.footer-subtitle {
+    font-size: 16px;
+    color: #474747;
+    font-family: "Proxima Nova Semibold"; }
+.news-empty-text {
+    font-size: 20px;
+    font-family: "Proxima Nova Regular"; }
+.smile {
+    font-size: 30px;
+    margin-left: 15px;}
+
+
+/*
+ * ─── HEADER ─────────────────────────────────────────────────────────────────────
+ */
+.main-title {
+    font-size: 22px;
+    color: #474747;
+    font-family: "Segoe UI Bold"!important; }
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F4F6F7; }
+.logo > img {
+    width: 65%; }
+
+.btn-header {
+
+    padding-top: 15px; }
+.btn-cover {
+    display: flex;
+    justify-content: flex-end; }
+
+.social {
+    display: flex;
+    justify-content: flex-end; }
+.social-item {
+    padding: 0 5px; }
+.social-item > a > img {
+    width: 35px;
+    height: 35px; }
+
+
+/*
+ * ─── NAVIGATION ─────────────────────────────────────────────────────────────────
+ */
+.navigation > nav > div > ul > li > a.nav-link {
+    font-size: 16px;
+    font-family: "Segoe UI Regular"; }
+.navigation > nav > div > ul > li > a.nav-link:focus {
+    color: #333333 !important; }
+    .navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active {
+    color: #333333; }
+
+.dropdown-item {
+    font-size: 16px;
+    color: #474747;
+    font-family: "Segoe UI Regular";  }
+.dropdown-item:hover, .dropdown-item:focus {
+    color: #333333; }
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #F2B84A; }
+
+.account-navs {
+    justify-content: flex-end; }
+
+
+/*
+ * ─── FOOTER ─────────────────────────────────────────────────────────────────────
+ */
+.footer-up {
+    padding: 30px 30px 0; }
+.navbar-group {
+    margin-bottom: 0; }
+
+.important-information > ul, .contacts > ul, .faq > ul {
+    flex-direction: column; }
+.important-information > ul > li > a.nav-link:hover,
+.contacts > ul > li > a.nav-link:hover, 
+.faq > ul > li > a.nav-link:hover {
+    text-decoration: underline; }
+
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+.copyright > p {
+    font-size: 13px;
+    margin-bottom: 0;
+    color: #333333;
+    font-family: "Proxima Nova Regular"; }
+
+
+/*
+ * ─── MAIN CONTENT ───────────────────────────────────────────────────────────────
+ */
+.main-content {
+    height: 100%;
+    margin-right: 0; }
+
+.card-img {
+    height: 100%;
+    object-fit: cover; }
+.card > div.row > div.col-md-6:first-child {
+    z-index: 1; }
+
+.carousel-card {
+    border: none; }
+.carousel-card-img {
+    max-height: 320px; }
+.carousel-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border: 1px solid #dee2e6; }
+.carousel-indicators li {
+    background-color: #474747; }
+
+.events-card {
+    border: none;
+    margin-bottom: 35px; }
+.events-card-img {
+    max-height: 200px !important;}
+.events-card-img-cover {
+    display: flex;
+    align-items: center;}
+
+.content-cover {
+    padding: 50px 20px; }
+.content-cover > p {
+    margin-bottom: 45px; }
+.news-item, .events-item {
+    margin-bottom: 35px; }
+
+.aside {
+    height: 100%;
+    padding: 48px 17px; }
+.aside-left {
+    padding-left: 0; }
+.aside-right {
+    padding-right: 0; }
+.aside-left-padding-fix {
+    padding: 48px 17px 48px 32px !important; }
+.aside-right-padding-fix {
+    padding: 48px 32px 48px 17px !important; }
+
+.aside-item {
+    margin-bottom: 45px; }
+.aside-gallery {
+    margin-bottom: 45px; }
+.aside-gallery-image {
+    object-fit: cover; }
+
+.about-item {
+    display: flex; }
+.about-company > .title {
+    margin-bottom: 45px; }
+.about-nav {
+    margin-top: 30px; }
+.about-nav > span {
+    color: #333333;
+    font-family: "Proxima Nova Semibold"; }
+
+.link-group {
+    display: flex;
+    flex-direction: column; }
+.link-item {
+    margin-bottom: 8px; }
+
+.pagination-cover {
+    margin-top: 70px; }
+
+
+/*
+ * ─── FORM ───────────────────────────────────────────────────────────────────────
+ */
+.form-support {
+    margin-top: 30px; }
+.form-support > p {
+    margin-bottom: 5px; }
+.form-margin-top-50 {
+    margin-top: 50px; }
+
+.form-control {
+    color: #474747;
+    font-family: "Proxima Nova Regular"; }
+.form-control:focus {
+    color: #474747;
+    border-color: #F2B84A;
+    box-shadow: 0 0 0 0.2rem rgba(242, 183, 74, 0.5); }
+.form-control::placeholder {
+    font-family: "Proxima Nova Regular"; }
+
+.inputFile {
+    width: 0.1px;
+    height: 0.1px;
+
+    opacity: 0;
+    z-index: -1;
+
+    overflow: hidden;
+    position: absolute; }
+.inputFile-info {
+    color: #BBBBBB; }
+.inputFile-btn {
+    margin-right: 30px; }
+.inputFile-label {
+    margin-bottom: 0px; }
+
+.required {
+    color: #dc3545;
+    font-size: 20px; }
+
+.editor {
+    padding: 20px 0;
+    border: 1px solid #ced4da;
+    border-radius: .25rem; }
+
+/*
+ * ─── PROFILE ────────────────────────────────────────────────────────────────────
+ */
+.profile > div p{
+    margin-bottom: 8px; }
+.profile-img {
+    width: 100%;
+    height: 280px;
+    max-width: 280px;
+    margin: 0 auto; }
+.profile-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.default {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+.default > img {
+    width: 150px !important;
+    height: 150px !important; }
+
+.profile-util {
+    margin-top: 50px; }
+
+/*
+ * ─── MEDIACENTER ────────────────────────────────────────────────────────────────
+ */
+.fotorama__caption {
+    color: #474747;
+    font-size: 16px;
+    font-family: "Proxima Nova Regular"; }
+
+.video-player {
+    max-width: 100%; }
+
+.video-card {
+    border: none;
+    margin-bottom: 35px; }
+.video-card-img {
+    max-height: 250px !important;}
+.video-card-img-cover {
+    display: flex;
+    align-items: center;}
+
+/*
+ * ─── TEXT-EDITOR ────────────────────────────────────────────────────────────────
+ */
+.image > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; }
+.text > h1, .text > h2, .text > h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-family: "Segoe UI Semibold";} 
+
+@media (max-width: 576px) {
+    /**
+     * Header
+     */
+    .header {
+        height: auto;
+        margin-top: 0rem; }
+
+    .logo {
+        padding: 15px 15px; }
+    .logo > img {
+        width: 120px; }
+    
+    .main-title {
+        font-size: 18px;
+        padding-top: 15px;
+        font-family: "Segoe UI Semibold"!important;  }
+
+    .btn-header {
+        padding-bottom: 15px; }
+    .btn-cover {
+        flex-direction: column; }
+    .btn-cover > a:first-child {
+        margin-bottom: 8px; }
+
+    .social {
+        justify-content: center; }
+    .social-item > a > img {
+        width: 35px; }
+    
+    /**
+     * Main content
+     */
+    .text {
+        font-size: 14px;  }
+
+    .main-content {
+        margin-left: -15px;
+        margin-right: -15px; }
+    
+    .carousel-cover {
+        padding-top: 0; }
+    .carousel-card {
+        padding: 30px 15px 55px 15px; }
+    .carousel-card-body {
+        height: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        margin-left: 10px;
+        margin-right: 10px;
+    
+        border-top: 0;
+        border-bottom-left-radius: .25rem;
+        border-bottom-right-radius: .25rem; }
+    .carousel-card-img {
+        max-height: 172px; }
+    .event-card-body {
+        padding: 0;
+        padding-top: 20px; }
+
+    .aside-gallery-image {
+        height: 190px; }
+
+    .about {
+        margin-top: 1rem; }
+    .aside-right {
+        margin-top: 1rem; }
+    .aside-left, .aside-right {
+        padding-left: 0;
+        padding-right: 0; }
+    
+    .inputFile-info {
+        display: block;
+        margin-top: 7px; }
+    
+    .profile-cover {
+        margin-bottom: 50px; }
+
+    /**
+     * Footer
+     */
+    .important-information, .contacts, .faq {
+        display: flex;
+        justify-content: start;
+        margin-bottom: 15px; }
+    .copyright {
+        padding-top: 20px;
+        padding-bottom: 20px; }
+}
+
+@media (min-width: 576px) {
+    /**
+     * Header
+     */
+    .header {
+        height: auto;
+        margin-top: 0rem; }
+
+    .logo {
+        padding: 15px 15px; }
+    .logo > img {
+        width: 120px; }
+
+    .main-title {
+        font-size: 18px;
+        padding-top: 15px;
+        font-family: "Segoe UI Semibold"!important; }
+
+    .btn-header {
+        padding-bottom: 15px; }
+    .btn-cover {
+        flex-direction: column; }
+    .btn-cover > a:first-child {
+        margin-bottom: 8px; }
+
+    .social {
+        justify-content: center; }
+    .social-item > a > img {
+        width: 35px; }
+       
+    /**
+     * Main content
+     */
+    .main-content {
+        margin-left: -15px;
+        margin-right: -15px; }
+    
+    .carousel-cover {
+        padding-top: 0; }    
+    .carousel-card {
+        padding: 30px 20px 55px 20px; }
+    .carousel-card-body {
+        height: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        margin-left: 10px;
+        margin-right: 10px;
+    
+        border-top: 0;
+        border-bottom-left-radius: .25rem;
+        border-bottom-right-radius: .25rem; }
+    .carousel-card-img {
+        max-height: 312px; }
+    .event-card-body {
+        padding: 0;
+        padding-top: 20px; }
+
+    .aside-gallery-image {
+        height: 320px; }
+
+    .about {
+        margin-top: 1rem; }
+    .aside-right {
+        margin-top: 1rem; }
+    .aside-left, .aside-right {
+        padding-left: 0;
+        padding-right: 0; }   
+    
+    .profile-cover {
+        margin-bottom: 50px; }
+
+    /**
+     * Footer
+     */
+    .important-information, .contacts, .faq {
+        display: flex;
+        justify-content: start;
+        margin-bottom: 15px; }
+    .copyright {
+        padding-top: 20px;
+        padding-bottom: 20px; }
+}
+
+@media (min-width: 768px) {
+    /**
+     * Header
+     */
+    .header {
+        height: 180px;
+        margin-top: 0.5rem; }
+
+    .logo {
+        padding: 0px 15px; }
+    .logo > img {
+        width: 120px; }
+
+    .main-title {
+        font-size: 18px;
+        padding-top: 15px;
+        font-family: "Segoe UI Semibold"!important; }
+
+    .social {
+        justify-content: flex-end; }
+    .social-item > a > img {
+        width: 29px; }
+    
+    /**
+     * Main Content
+     */
+    .carousel-card-body {
+        height: 300px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        margin-left: 0px;
+        margin-right: 0px;
+    
+        border-left: 0;
+        border-top-right-radius: .25rem;
+        border-bottom-right-radius: .25rem; }
+    .carousel-card-img {
+        max-height: 320px; }
+    .event-card-body {
+        padding: 0;
+        padding-left: 20px; }
+
+    .profile-cover {
+        margin-bottom: 0px; }
+
+    .aside-gallery-image {
+        height: 420px; }
+
+    /**
+     * Footer
+     */
+    .important-information, .contacts, .faq {
+        display: flex;
+        justify-content: start;
+        margin-bottom: 15px; }
+}
+
+@media (min-width: 992px) {
+    /**
+     * Header
+     */
+    .logo > img {
+        width: 150px; }
+
+    .main-title {
+        font-size: 22px;
+        padding-top: 15px;
+        font-family: "Segoe UI Bold"!important; }
+
+    .btn-cover {
+        flex-direction: row; }
+    .btn-cover > a:first-child {
+        margin-bottom: 0; }
+
+    .social-item > a > img {
+        width: 35px; }
+  
+    /** 
+     * Main Content 
+     */
+    .about {
+        margin-top: 0; }
+    .aside-left {
+        padding-right: 15px; }  
+    .aside-right {
+        margin-top: 0;
+        padding-left: 15px;}
+
+    .main-content {
+        margin-right: 0;
+        margin-left: -15px; }
+
+    .aside-gallery-image {
+        height: 190px; }
+
+    .carousel-cover {
+        padding-top: 48px; }
+
+    /**
+     * Footer
+     */
+    .important-information, .contacts, .faq {
+        display: flex;
+        justify-content: center;}
+}

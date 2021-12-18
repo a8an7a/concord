@@ -1,0 +1,196 @@
+{% extends 'layouts/app.twig' %}
+
+{% block title %}Вопросы и ответы{% endblock %}
+
+{% block content %}
+    <div class="main row mb-3">
+        <div class="col-sm-12 col-md-12 col-lg-8 border rounded shadow-sm">
+            <div class="content-cover">
+                <p class="title mb-3">Задайте свой вопрос</p>
+                <p class="small mb-3">Ответ на него придет вам на почту в ближайшее время</p>
+
+                <form class="mb-5">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputName" class="form-title">Имя<span class="required ml-1">&#42;</span></label>
+                            <input type="text" class="form-control" id="inputName">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail" class="form-title">Эл. почта<span class="required ml-1">&#42;</span></label>
+                            <input type="email" class="form-control" id="inputEmail">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputMessage" class="form-title">Текст вопроса<span class="required ml-1">&#42;</span></label>
+                        <textarea class="form-control" id="inputMessage" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group form-margin-top-50 row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-mustard">Задать вопрос</button>
+                        </div>
+                    </div>
+                </form>
+
+                <p class="subtitle">Ответы на часто задаваемые вопросы</p>
+
+                <div class="accordion" id="accordionAnswer">
+                    <div class="card">
+                        <div class="card-header" id="heading-1">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link text-left answer-heading" type="button" data-toggle="collapse" data-target="#answer-1" aria-expanded="true" aria-controls="answer-1">
+                                    Как я могу вступить в Межрегиональную Общественную Организацию «Содружество военных автомобилистов»?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="answer-1" class="collapse show" aria-labelledby="heading-1" data-parent="#accordionAnswer">
+                            <div class="card-body text">
+                                Для вступления в МОО СВА необходимо заполнить <a href="#">анкету</a>. В анкете вы должны указать свой адрес электронной почты,
+                                пароль, ФИО и дату рждения. Также при желании можно указать свое место работы, занимаемую должность, место жительства, а также
+                                вы можете загрузить свою фотографию.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="heading-2">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link text-left answer-heading" type="button" data-toggle="collapse" data-target="#answer-2" aria-expanded="true" aria-controls="answer-2">
+                                    Как я могу изменить пароль от аккаунта?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="answer-2" class="collapse" aria-labelledby="heading-2" data-parent="#accordionAnswer">
+                            <div class="card-body text">
+                                Пароль от аккаунта можно изменить в вашем профиле во вкладке «Редактировать профиль». 
+                                Для этого вам необходимо будет ввести старый пароль и ввести новый.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="heading-3">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link text-left answer-heading" type="button" data-toggle="collapse" data-target="#answer-3" aria-expanded="true" aria-controls="answer-3">
+                                    Я забыл пароль от аккаунта, что мне делать?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="answer-3" class="collapse" aria-labelledby="heading-3" data-parent="#accordionAnswer">
+                            <div class="card-body text">
+                                Если пароль от вашего аккаунта был утерян, вы можете его <a href="#">сбросить</a>. Для этого необходимо будет указать адрес
+                                электронной почты, который вы ввели при регистрации. На этот почтовый ящик вы получите письмо с дальшнейими 
+                                инструкциями по сбросу пароля.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="heading-4">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link text-left answer-heading" type="button" data-toggle="collapse" data-target="#answer-4" aria-expanded="true" aria-controls="answer-4">
+                                    Что мне даст вступление в МОО СВА?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="answer-4" class="collapse" aria-labelledby="heading-4" data-parent="#accordionAnswer">
+                            <div class="card-body text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat doloremque nesciunt 
+                                iste corrupti eaque culpa vel sequi repellendus, vitae aliquam voluptates, unde neque 
+                                consequuntur nemo cumque velit repudiandae quo.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="heading-5">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link text-left answer-heading" type="button" data-toggle="collapse" data-target="#answer-5" aria-expanded="true" aria-controls="answer-5">
+                                    Почему я не могу изменить свое имя/почту/дату рождения указанные при регистрации в редактировании профиля? 
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="answer-5" class="collapse" aria-labelledby="heading-5" data-parent="#accordionAnswer">
+                            <div class="card-body text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat doloremque nesciunt 
+                                iste corrupti eaque culpa vel sequi repellendus, vitae aliquam voluptates, unde neque 
+                                consequuntur nemo cumque velit repudiandae quo.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="aside-right col-sm-12 col-md-12 col-lg-4">
+            <div class="aside border rounded shadow-sm">
+                <div class="aside-item text-center">
+                    <p class="aside-title">
+                        Вступай в ряды Содружества
+                    </p>
+                    <div id="carouselAside" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://bit.ly/39UoPFr" class="d-block w-100 aside-gallery-image" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://bit.ly/2XrH56w" class="d-block w-100 aside-gallery-image" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://bit.ly/34rEzi3" class="d-block w-100 aside-gallery-image" alt="...">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselAside" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselAside" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <a href="{{ url_for('auth.signup') }}" class="btn btn-mustard mt-4" role="button">Вступить</a>
+                </div>
+                <div class="aside-item">
+                    <p class="aside-title text-center">
+                        Цели Содружества
+                    </p>
+                    <p class="text">
+                        Целями создания МОО «Содружество военных автомобилистов» являются добровольное объединение граждан с
+                        целью удовлетворения духовных и иных нематериальных потребностей в том числе:
+                    </p>
+                    <p class="text">
+                        <span class="text-bold">1.</span>
+                        Представление и защита социально-экономических прав и интересов участников
+                        Содружества в органах государственной власти и местного самоуправления;
+                    </p>
+                    <p class="text">
+                        <span class="text-bold">2.</span>
+                        Содействие улучшению социально-бытовых условий и медицинского
+                        обеспечения военных автомобилистов;
+                    </p>
+                    <p class="text">
+                        <span class="text-bold">3.</span> 
+                        Объединение усилий участников Содружества в патриотическом воспитании
+                        молодежи, в формировании у подрастающего поколения патриотического сознания,
+                        здорового образа жизни, высокого чувства гражданского долга и ответственности.
+                    </p>
+                </div>
+                <div class="aside-item text-center">
+                    <p class="aside-title mb-0">
+                        Для участников Содружества
+                    </p>
+                    <a href="{{ url_for('auth.signin') }}" class="btn btn-mustard mt-4" role="button">Войти</a>
+                </div>
+                <div class="aside-item mb-0">
+                    <p class="text">
+                        <a href="#">Региональные подразделения</a><br>
+                        <a href="#">Информационные ресурсы</a><br>
+                        <a href="#">Наши партнеры</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

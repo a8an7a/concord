@@ -1,0 +1,103 @@
+{% extends 'layouts/cms.twig' %}
+
+{% block title %}Просмотр публикации{% endblock %}
+
+{% block style %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <div class="main row mb-3">
+        <div class="col-sm-12 border rounded shadow-sm">
+            <div class="content-cover">
+                <p class="title">Опубликованные новости</p>
+
+                {% include "components/status.twig" %}
+
+                {% if  news is not empty %}
+                    {% for item in news %}
+                    
+                        <div class="ml-0 mr-0 mb-5 row">
+                            <div class="col-sm-12 border rounded shadow pt-4 pb-4 pl-5 pr-5">
+                                <div class="card w-100 events-card mb-3">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-4 events-card-img-cover">
+                                            <img src="/public_html/upload/image/news/{{ item.preview_image }}" class="card-img events-card-img shadow" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body event-card-body">
+                                                <a href="{{ url_for('cms.news.view', { 'id': item.id }) }}" class="content-title">
+                                                    {{ item.news_title }}
+                                                </a>
+                                                <p class="content-subtitle">
+                                                    {{ item.publication_date }}
+                                                </p>
+                                                <p class="text">
+                                                    {{ item.preview_text }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Действие
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="{{ url_for('cms.news.edit', { 'id': item.id }) }}">Редактировать</a>
+                                        <div class="dropdown-divider"></div>
+                                            <button class="dropdown-item news-delete" type="button" data-toggle="modal" data-target="#confirmationModal" news-id="{{ item.id }}">
+                                                Удалить
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    {% endfor %}
+
+                    {{ news.links | raw }}
+
+                {% else %}
+
+                    <p class="news-empty-text text-muted">Новостные публикации отсутствуют <span class="smile">: (</span></p>
+                
+                {% endif %}
+                
+
+                <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="confirmationModalTitle">Подтверждение действия</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text">
+                                Вы действительно хотите удалить данную публикацию?
+                            </div>
+                            <div class="modal-footer text">
+                                <a href="#" class="btn btn-danger news-delete-link" role="button">Удалить</a>
+                                <button type="button" class="btn btn-light" data-dismiss="modal">Отменить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    <script>
+        $('.news-delete').on('click', function (e) {
+            var path = '/cms/news/delete/' + $(this).attr('news-id'); 
+            $('.news-delete-link').attr('href', path);
+        })
+    </script>
+{% endblock %}

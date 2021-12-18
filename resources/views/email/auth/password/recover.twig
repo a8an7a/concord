@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Восстановление пароля</title>
+</head>
+<body>
+    {% set link = full_url_for('auth.password.reset', {}, { 'email': user.email, 'code': code }) %}
+
+    <p>
+        Здравствуйте, {{ user.first_name }}!
+    </p>
+
+    <p>    
+        Нажмите <a href="{{ link }}">здесь</a>, чтобы перейти на страницу восстановления пароля.
+    </p>
+
+    <p>
+        <small>
+            C уважением, команда разработки<br>
+            <i>МОО «Содружество военных автомобилистов»</i>
+        </small> 
+    </p>
+</body>
+</html>

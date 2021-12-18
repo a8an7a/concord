@@ -1,0 +1,51 @@
+{% extends 'layouts/app.twig' %}
+
+{% block title %}Фотогалерея{% endblock %}
+
+{% block style %}
+    {{ parent() }}
+    <link rel="stylesheet" href="/public_html/css/fotorama/fotorama.css">
+{% endblock %}
+
+{% block content %}
+    <div class="main row mb-3">
+        <div class="photogallery col-sm-12 border rounded shadow-sm">
+            <div class="content-cover">
+                <p class="title">Фотогалерея</p>
+
+                <div class="photo">
+                    <div class="fotorama" 
+                        data-width="100%"
+                        data-maxheight="600"
+                        data-ratio="800/600"
+                        data-arrows="true" 
+                        data-nav="thumbs"
+                        data-allowfullscreen="true">
+
+                        <img src="https://bit.ly/3affUOZ" data-caption="Текст с описанием изображения">
+                        <img src="https://bit.ly/2Vd6NKK" data-caption="Текст с описанием изображения">
+                        <img src="https://bit.ly/3chYGC8" data-caption="Текст с описанием изображения">
+                        <img src="https://bit.ly/3abGFUs" data-caption="Текст с описанием изображения">
+                        <img src="https://bit.ly/3chYJxO" data-caption="Текст с описанием изображения">
+                        <img src="https://bit.ly/3eivTiN" data-caption="Текст с описанием изображения">
+                        <img src="https://bit.ly/2VwfuhZ" data-caption="Текст с описанием изображения">
+                        <img src="https://bit.ly/2XAKboO" data-caption="Текст с описанием изображения">
+                        <img src="https://bit.ly/2RD3nhS" data-caption="Текст с описанием изображения">
+                        <img src="https://bit.ly/2z0JLOl" data-caption="Текст с описанием изображения">
+                        <img src="https://bit.ly/2ydo0uv" data-caption="Текст с описанием изображения">
+                        <img src="https://bit.ly/3bePvm2" data-caption="Текст с описанием изображения">
+                        <img src="https://bit.ly/2xzBRv5" data-caption="Текст с описанием изображения">
+                        <img src="https://bit.ly/2XAPwww" data-caption="Текст с описанием изображения">
+                        <img src="https://bit.ly/3a7htyJ" data-caption="Текст с описанием изображения">
+                        <img src="https://bit.ly/2VbufrO" data-caption="Текст с описанием изображения">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    <script src="/public_html/js/fotorama/fotorama.js"></script>
+{% endblock %}
